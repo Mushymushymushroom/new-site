@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Move Popup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Move your mouse and see the magic!</h1>
 
+    <script>
+        let mouseMoveCount = 0;
+
+        document.addEventListener('mousemove', () => {
+            mouseMoveCount++;
+
+            // Check if the mouse has moved three times
+            if (mouseMoveCount % 3 === 0) {
+                alert('You moved your mouse 3 times!');
+            }
+        });
+    </script>
+</body>
+</html>
